@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 
     float vertIn, horzIn;
     Vector3 forward, right, forwardRelativeVertIn, rightRelativeHorzIn, cameraRelativeMovement;
-
+    Animator animator;
     Rigidbody rb;
 
     bool pressedJump, canJump, jumpWasPressed;
@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
         jumpWasPressed = false;
         clamp = 5;
         Cursor.lockState = CursorLockMode.Locked;
+        animator = GetComponent<Animator>();
+      
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class Movement : MonoBehaviour
     {     
         vertIn = Input.GetAxis("Vertical");
         horzIn = Input.GetAxis("Horizontal");
-
+        
 
         forward = transform.InverseTransformDirection(Camera.main.transform.forward).normalized;
         right = transform.InverseTransformDirection(Camera.main.transform.right).normalized;
@@ -69,12 +71,14 @@ public class Movement : MonoBehaviour
 
         if (pressedJump && canJump)
         {
+            animator.SetBool("isJumping", true);
             pressedJump = false;
             cameraRelativeMovement = new Vector3(cameraRelativeMovement.x, 50, cameraRelativeMovement.z);
             rb.AddRelativeForce(cameraRelativeMovement, ForceMode.VelocityChange);
             clamp = 8;
         }
-        else 
+        else
+            
             rb.AddRelativeForce(cameraRelativeMovement, ForceMode.VelocityChange);
         
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, clamp);        
