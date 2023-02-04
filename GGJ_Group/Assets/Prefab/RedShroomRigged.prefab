@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 785762797866184690}
   - component: {fileID: 967480505927887296}
-  - component: {fileID: 967480505927887298}
   - component: {fileID: 967480505927887303}
   - component: {fileID: 3626452587193209548}
   - component: {fileID: 9017076887089410593}
   - component: {fileID: 5791130283065489018}
+  - component: {fileID: 1996648406}
   m_Layer: 0
   m_Name: RedShroomRigged
   m_TagString: Enemy
@@ -55,20 +55,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &967480505927887298
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120550134461740360}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.023436703
-  m_Height: 0.088713095
-  m_Direction: 1
-  m_Center: {x: 0.002369748, y: 0.042651124, z: 0.0021677362}
 --- !u!95 &967480505927887303
 Animator:
   serializedVersion: 4
@@ -99,7 +85,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 7
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 1
   m_AngularSpeed: 120
@@ -136,8 +122,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bca64f1f478e85408457420aae84392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMax: 3
+  healthMax: 1
   healthCurrent: 0
+--- !u!65 &1996648406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120550134461740360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06690655, y: 0.09561748, z: 0.0519463}
+  m_Center: {x: 0.0034295276, y: 0.04866785, z: -0.00009733982}
 --- !u!1 &618104344845603552
 GameObject:
   m_ObjectHideFlags: 0
