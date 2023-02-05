@@ -374,6 +374,8 @@
 "Assets/Scripts/Ian/PushBack.cs"
 "Assets/Scripts/Ian/SpawnEnemy.cs"
 "Assets/Scripts/Ian/Timer.cs"
+"Assets/UI/BackgroundMuisc.cs"
+"Assets/UI/Menu.cs"
 -langversion:9.0
 
 /deterministic

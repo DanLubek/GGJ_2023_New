@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ea1a6241c29e168489affeb63f729775
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - PUNY
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2796660a739131c4c8087d4b72808c5f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

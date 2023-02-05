@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     static int curHealth;
@@ -33,6 +33,8 @@ public class PlayerHealth : MonoBehaviour
             curHealth = maxHealth;
         }
 
+    
+
     }
 
     public static void AddHealth(int healthToAdd)
@@ -62,4 +64,6 @@ public class PlayerHealth : MonoBehaviour
     {
         GUI.Label(new Rect(10, 10, 200, 200), curHealth.ToString());
     }
+  
+
 }

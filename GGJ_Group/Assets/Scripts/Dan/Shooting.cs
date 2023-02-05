@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject spikePrefab, spawnPoint;
-
+    public AudioSource shoot;
     bool canShoot;
 
     private void Start()
@@ -18,6 +18,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && canShoot)
         {
+            shoot.Play();
             canShoot = false;
             Instantiate(spikePrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
             StartCoroutine(ShootDelay());

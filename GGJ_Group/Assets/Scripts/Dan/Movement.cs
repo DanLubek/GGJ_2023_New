@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
 
     int clamp;
 
+    public AudioSource jump;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +73,7 @@ public class Movement : MonoBehaviour
 
         if (pressedJump && canJump)
         {
+            jump.Play();
             animator.SetBool("isJumping", true);
             pressedJump = false;
             cameraRelativeMovement = new Vector3(cameraRelativeMovement.x, 50, cameraRelativeMovement.z);
