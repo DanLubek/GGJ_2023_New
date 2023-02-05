@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class DestroyTree : MonoBehaviour
 {
-    public int healthMax = 3;
-
-    public int healthCurrent;
+    public float healthMax = 1;
+    public float healthCurrent;
+    private float damage;
 
     void Start()
     {
-
+        damage = 0.1f;
         healthCurrent = healthMax;
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -20,17 +19,14 @@ public class DestroyTree : MonoBehaviour
 
         if(collision.collider.CompareTag("Enemy"))
         {
+            healthCurrent -= damage;
+            HealthBars.UpdateTreeHealth(damage);
 
-            healthCurrent--;
-
-            if (healthCurrent == 0)
+            if (healthCurrent <= 0)
             {
+                HealthBars.HideTreeHealth();
                 Destroy(gameObject);
             }
-
-
         }
-
     }
-
 }

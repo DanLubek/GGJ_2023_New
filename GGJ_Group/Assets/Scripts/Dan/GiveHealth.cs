@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GiveHealth : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class GiveHealth : MonoBehaviour
     float distance;
     public GameObject player;
     float detectionDistance;
+
+    public GameObject gainedHealth;
+
 
     private void Start()
     {
@@ -21,9 +25,15 @@ public class GiveHealth : MonoBehaviour
 
         if (distance <= detectionDistance && canHeal)
         {
-            PlayerHealth.GiveMaxHealth();
-            canHeal = false;
-            StartCoroutine(HealDelay());
+            if (PlayerHealth.curHealth != 1)
+            {
+                PlayerHealth.GiveMaxHealth();
+                HealthBars.MaxPlayerHealth();
+                gainedHealth.SetActive(true);
+                StartCoroutine(TextDisplayCountdown());
+                canHeal = false;
+                StartCoroutine(HealDelay());
+            }
         }
     }
 
@@ -31,5 +41,11 @@ public class GiveHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(8f);
         canHeal = true;
+    }
+
+    IEnumerator TextDisplayCountdown()
+    {
+        yield return new WaitForSeconds(2f);
+        gainedHealth.SetActive(false);
     }
 }

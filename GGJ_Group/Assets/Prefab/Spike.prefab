@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7557557158045430717}
   - component: {fileID: 4084657400268383491}
   - component: {fileID: -1711531608958721930}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike
   m_TagString: Bullet
   m_Icon: {fileID: 0}

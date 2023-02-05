@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9017076887089410593}
   - component: {fileID: 5791130283065489018}
   - component: {fileID: 1996648406}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedShroomRigged
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -122,8 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bca64f1f478e85408457420aae84392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMax: 1
-  healthCurrent: 0
 --- !u!65 &1996648406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135,8 +133,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.06690655, y: 0.09561748, z: 0.0519463}
-  m_Center: {x: 0.0034295276, y: 0.04866785, z: -0.00009733982}
+  m_Size: {x: 0.10609536, y: 0.09561748, z: 0.09727747}
+  m_Center: {x: 0.0031900743, y: 0.04866785, z: 0.0002397182}
 --- !u!1 &618104344845603552
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5114203415604429496}
   - component: {fileID: 8719252141730613489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466309195027872041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8530907980600028146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5196990547731228388}
   - component: {fileID: 700613154411907444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8412114370731863982}
   - component: {fileID: 4733189856894963433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6271448583850191180}
   - component: {fileID: 4432320627876575927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7479363471871073591}
   - component: {fileID: 5337853130400961232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 530088800632934591}
   - component: {fileID: 4430140751738954507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6887789230372554664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3327012378967690122}
   - component: {fileID: 8100824255319442635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7403308583030291940}
   - component: {fileID: 5236909475710913652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6535050041664457443}
   - component: {fileID: 6717169076298948740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8779923492569408339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7447266222303154468}
   - component: {fileID: 6173500360983424806}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7188837345189599608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1206,7 +1204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698617467297543734}
   - component: {fileID: 6901142067142661365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3067883120659881757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7675472988596358408}
   - component: {fileID: 1600030659042846993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3986456609486102233}
   - component: {fileID: 144921872288705057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,7 +1516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2998726091839398599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedShroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6812227253477026287}
   - component: {fileID: 8914261217239079503}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}

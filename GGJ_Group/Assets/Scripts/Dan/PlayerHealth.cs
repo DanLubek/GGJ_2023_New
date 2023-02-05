@@ -2,39 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
-    static int curHealth;
-    static int maxHealth;
+    public static float curHealth;
+    static float maxHealth;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public static bool gameOver;
+    void Awake()
     {
-        maxHealth = 50;
-        curHealth = maxHealth;
+        gameOver = false;
+        maxHealth = 1;
+        curHealth = maxHealth;        
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            AddHealth(5);
-        }
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            RemoveHealth(5);
-        }
-
         if (curHealth > maxHealth)
         {
             curHealth = maxHealth;
         }
-
-    
-
+        if (gameOver == true) Debug.Log("a");
     }
 
     public static void AddHealth(int healthToAdd)
@@ -42,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         curHealth += healthToAdd;
     }
 
-    public static void RemoveHealth(int healthToRemove)
+    public static void RemoveHealth(float healthToRemove)
     {
         curHealth -= healthToRemove;
     }
@@ -56,14 +44,20 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            RemoveHealth(5);
+            RemoveHealth(0.2f);
+            HealthBars.UpdatePlayerHealth(0.2f);
+
+            if (curHealth <= 0.1f)
+            {
+                Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.None;
+                gameOver = true;
+            }
         }
     }
 
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 200, 200), curHealth.ToString());
-    }
-  
-
+    //private void OnGUI()
+    //{
+    //    GUI.Label(new Rect(10, 10, 200, 200), curHealth.ToString());
+    //}
 }

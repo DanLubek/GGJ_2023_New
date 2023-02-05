@@ -26,8 +26,7 @@ public class Movement : MonoBehaviour
         jumpWasPressed = false;
         clamp = 5;
         Cursor.lockState = CursorLockMode.Locked;
-        animator = GetComponent<Animator>();
-      
+        animator = GetComponent<Animator>();      
     }
 
     // Update is called once per frame
@@ -50,7 +49,13 @@ public class Movement : MonoBehaviour
     {     
         vertIn = Input.GetAxis("Vertical");
         horzIn = Input.GetAxis("Horizontal");
-        
+
+        if (vertIn != 0 || horzIn != 0) animator.SetBool("isRunning", true);
+        else if (vertIn == 0 || horzIn == 0)
+        {
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isIdle", true);
+        }
 
         forward = transform.InverseTransformDirection(Camera.main.transform.forward).normalized;
         right = transform.InverseTransformDirection(Camera.main.transform.right).normalized;
@@ -73,8 +78,9 @@ public class Movement : MonoBehaviour
 
         if (pressedJump && canJump)
         {
-            jump.Play();
+            jump.Play();            
             animator.SetBool("isJumping", true);
+            if (animator.GetBool("isJumping") == true) animator.SetBool("isRunning", false);
             pressedJump = false;
             cameraRelativeMovement = new Vector3(cameraRelativeMovement.x, 50, cameraRelativeMovement.z);
             rb.AddRelativeForce(cameraRelativeMovement, ForceMode.VelocityChange);
@@ -98,6 +104,7 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        animator.SetBool("isJumping", false);
         StartCoroutine(JumpDelay());        
     }
 

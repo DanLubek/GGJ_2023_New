@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6647473869217379188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4345104568858567470}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3536812176180455067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1986496829420603370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3874721745808950252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueShroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7418415081904651000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 2398730057333211183}
   - component: {fileID: 6220953120369022895}
   - component: {fileID: 2005458948299374984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueShroomRigged
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -314,8 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bca64f1f478e85408457420aae84392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMax: 1
-  healthCurrent: 0
 --- !u!65 &2005458948299374984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -339,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6168297232428650351}
   - component: {fileID: 978162009934217478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stalk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8792486344528314855}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6700933929160118316}
   - component: {fileID: 6759580631520802329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

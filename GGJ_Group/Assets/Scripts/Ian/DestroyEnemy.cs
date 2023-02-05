@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
-
-    public int healthMax = 1;
-
-    public int healthCurrent;
-
-    void Start()
-    {
-
-        healthCurrent = healthMax;
-
-    }
+    public static int killCount;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Bullet"))
         {
-            gameObject.SetActive(false);
+            killCount++;
+            Debug.Log(killCount);
+            gameObject.SetActive(false);            
         }
     }
 }
